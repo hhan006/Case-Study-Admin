@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>JavaJam Coffee House Menu</title>
+  <title>JavaJam Coffee House Jobs</title>
   <meta charset="utf-8">
   <style>
     body {
@@ -52,12 +52,26 @@
     }
 
     .content {
-      padding: 20px 20px 20px 20px;
+      padding: 20px 20px 30px 20px;
     }
 
     #floatright {
       margin: 10px;
       float: right;
+    }
+
+    #fistImg {
+      float: left;
+      margin: 0 0 20px 30px;
+    }
+
+    .listItem {
+      padding-left: 300px;
+    }
+
+    .listItem ul {
+      padding-left: 20px;
+      list-style-image: url('trillium.gif');
     }
 
     footer {
@@ -98,24 +112,30 @@
       color: #e75010;
     }
 
-    table {
-      width: 90%;
-      margin: auto;
-      border-spacing: 3px;
-      padding-bottom: 1em;
+    label {
+      display: block;
+      float: left;
+      text-align: right;
+      width: 8em;
+      padding-right: 30px;
+
     }
 
-    tr:nth-of-type(odd) {
-      background-color: #d2b48c;
+    input {
+      display: block;
+      margin-bottom: 20px;
+
     }
 
-    th,
-    td {
-      padding: 10px;
+    textarea {
+      display: block;
+      margin-bottom: 20px;
     }
 
-    #cheBox {
-      background-color:#f5f5dc;
+    #SubmitButton {
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 0;
     }
 
   </style>
@@ -128,9 +148,9 @@
       <!-- soruse is https://static3.depositphotos.com/1008154/254/i/950/depositphotos_2545988-stockafbeelding-kronkelende-weg.jpg. -->
     </header>
     <div id="leftcolumn">
-    <nav>
+      <nav>
         <ul>
-        <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="NewMenu.php">Menu</a></li>
           <li><a href="music.html">Music</a></li>
           <li><a href="jobs.html">Jobs</a></li>
@@ -139,21 +159,34 @@
           <br>
           <li><a href="Report.php">Sales Reports</a></li>
         </ul>
+      </nav>
     </div>
     <div id="rightcolumn">
-			<div class="content">
-				<h2>Click to update product prices: </h2>
-				<form action="NewMenu.php" method="post">
-        <table class="tablecentered">
-						<?php include 'items.php' ?>	
-						<tr>
-							<td colspan="3"><input type="submit" value="Update" class="submit-button"></td>
-						</tr>
-					</table>
-				</form>
-				
-			</div>
-		</div>
+      <div class="content">
+        <h2>Jobs at JavaJam</h2>
+        <p>
+          Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with
+          an asterik *
+        </p>
+        <form method="post" action="resources/show_post.php">
+
+          <label for="name"> * Name:</label>
+          <input type="text" name="myName" id="name" required>
+
+          <label for="E-Mail"> * E-mail:</label>
+          <input type="email" name="myE-mail" id="E-Mail" required>
+
+          <label for="myDate">Start Date</label>
+          <input type="date" name="myDate" id="myDate">
+
+          <label for="Experience"> * Experience:</label>
+          <textarea id="Experience" name="myExperience" cols="21" rows="2" required></textarea>
+
+          <input id="SubmitButton" type="submit" value="Apply Now">
+
+        </form>
+      </div>
+    </div>
     <footer>
       <small>
         <i>Copyright &copy; 2018 JavaJam Coffee House

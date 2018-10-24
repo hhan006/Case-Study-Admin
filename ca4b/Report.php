@@ -29,6 +29,7 @@
       margin-left: 155px;
       background-color: #f5f5dc;
       color: #2e0000;
+      min-height: 250px;
     }
 
     header {
@@ -117,6 +118,14 @@
       background-color:#f5f5dc;
     }
 
+    form {
+      margin-left: 20px;
+    }
+
+    input {
+      margin: 10px 0 10px 0;
+    }
+
   </style>
 </head>
 
@@ -129,9 +138,14 @@
     <div id="leftcolumn">
     <nav>
         <ul>
-          <li>
-            <a href="Menu.php">Product Price Update</a>
-          </li>
+        <li><a href="index.html">Home</a></li>
+          <li><a href="NewMenu.php">Menu</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <br>
+          <li><a href="admin_menu.php">Product Price Update</a></li>
+          <br>
+          <li><a href="Report.php">Sales Reports</a></li>
         </ul>
     </div>
     <div id="rightcolumn">

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JavaJam Coffee House Music</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+      background-color: #e4d297;
+    }
+
+    #wrapper {
+      background-color: #e2d2b0;
+      color: #2e0000;
+      margin: auto;
+      width: 90%;
+      min-width: 900px;
+      max-width: 1280px;
+      box-shadow: 6px 6px 6px;
+    }
+
+    #leftcolumn {
+      float: left;
+      width: 150px;
+    }
+
+    #rightcolumn {
+      margin-left: 155px;
+      background-color: #f5f5dc;
+      color: #2e0000;
+      min-height: 250px;
+    }
+
+    header {
+      background-color: #d3b58c;
+      ;
+      font-size: 150%;
+      padding: 10px 0;
+
+    }
+
+    #titleText {
+      display: block;
+      margin: auto;
+    }
+
+    h2 {
+      color: #2e0000;
+      font-family: arial, sans-serif;
+      margin-top: 0;
+    }
+
+    .content {
+      padding: 20px 20px 20px 20px;
+    }
+
+    #floatright {
+      margin: 10px;
+      float: right;
+    }
+
+    #fistImg {
+      float: left;
+      margin: 0 0 20px 30px;
+    }
+
+    .listItem {
+      padding-left: 300px;
+    }
+
+    .listItem ul {
+      padding-left: 20px;
+      list-style-image: url('trillium.gif');
+    }
+
+    footer {
+      font-size: 70%;
+      text-align: center;
+      clear: right;
+      padding: 15px;
+      background-color: #d3b58c;
+      color: black;
+    }
+
+    footer a {
+      color: #2e0000
+    }
+
+    nav ul {
+      list-style-type: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:link {
+      color: #7c5240;
+    }
+
+    nav a:visited {
+      color: #a8886b;
+    }
+
+    nav a:active {
+      color: #7c5240;
+    }
+
+    nav a:hover {
+      color: #e75010;
+    }
+
+    .musicContent h4 {
+      background-color: #e2d2b0;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      padding-bottom: 0px;
+      clear: left;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .details {
+      padding-left: 20%;
+      padding-right: 20%;
+      overflow: auto;
+    }
+
+    .details img {
+      padding-left: 10px;
+      padding-right: 40px;
+    }
+
+    .floatleft {
+      float: left;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
+
+    .details audio {
+      display: block;
+      margin-top: 1em;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <img src="resources/Caps.PNG" alt="JavaJam Coffee House" id="titleText">
+      <!-- soruse is https://static3.depositphotos.com/1008154/254/i/950/depositphotos_2545988-stockafbeelding-kronkelende-weg.jpg. -->
+    </header>
+    <div id="leftcolumn">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="NewMenu.php">Menu</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <br>
+          <li><a href="admin_menu.php">Product Price Update</a></li>
+          <br>
+          <li><a href="Report.php">Sales Reports</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="rightcolumn">
+      <div class="content">
+        <h2>Music at JavaJam</h2>
+        <p>
+          The first Friday night each month at JavaJam is a special night. Join us from 8 pm to 11 pm for some music
+          you won't want
+          to miss!
+        </p>
+
+        <div class="musicContent">
+
+          <div class="details">
+            <h4>January</h4>
+            <a href="resources/melanie.jpg">
+              <!-- http://homepages.uc.edu/~taylorw5/JJAssets/melanie.jpg -->
+              <img src="resources/melaniethumb.jpg" alt="Go to Melanie Morris full picture" class="floatleft">
+              <!-- http://homepages.uc.edu/~taylorw5/JJAssets/melaniethumb.jpg -->
+            </a>
+            Melanie Morris entertains with her melodic folk style.
+            <br>CDs are now available.
+
+            <audio controls="controls">
+              <source src="resources/melanie.mp3" type="audio/mp3">
+            </audio>
+          </div>
+
+          <div class="details">
+            <h4>FEBRUARY</h4>
+            <a href="resources/greg.jpg">
+              <!-- http://homepages.uc.edu/~taylorw5/JJAssets/greg.jpg -->
+              <img src="resources/gregthumb.jpg" alt="Go to Melanie Morris full picture" class="floatleft">
+              <!-- http://homepages.uc.edu/~taylorw5/JJAssets/gregthumb.jpg -->
+            </a>
+            Tahoe Greg is is back from his tour. <br>New Songs. <br>New Stories.
+            <br>CDs are now available.
+
+            <audio controls="controls">
+              <source src="resources/greg.mp3" type="audio/mp3">
+            </audio>
+
+          </div>
+
+        </div>
+      </div>
+      <footer>
+        <small>
+          <i>Copyright &copy; 2018 JavaJam Coffee House
+            <br>
+            <a href="mailto:hongyi@han.com">hongyi@han.com</a>
+          </i>
+
+        </small>
+
+      </footer>
+    </div>
+</body>
+
+</html>

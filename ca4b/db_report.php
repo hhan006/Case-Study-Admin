@@ -34,11 +34,12 @@ function find_sales_by_product($id){
             break;
     }
     
+    $sales = number_format($sales, 2);
 
     echo    "<tr>
                 <td>".$id."</td>
                 <td>".$name."</td>
-                <td>".$sales."</td>
+                <td>$".$sales."</td>
             </tr>";
 
     $result->free();
@@ -64,18 +65,19 @@ function find_sales_by_category($category){
         $sales = $sales + $row['sales'];
         $quant = $quant + $row['quantity'];
     }
+    $sale = number_format($sales, 2);
 
     if ($category == 'single') {
         echo "<tr>
                 <td>Single Shot</td>
                 <td>".$quant."</td>
-                <td>".$sales."</td>
+                <td>$".$sale."</td>
             </tr>";
     } else {
         echo "<tr>
                 <td>Double Shots</td>
                 <td>".$quant."</td>
-                <td>".$sales."</td>
+                <td>$".$sale."</td>
             </tr>";
     }
 
@@ -87,7 +89,7 @@ function find_sales_by_category($category){
 
 if ($radio == 'dollarSales') {
     echo "<h2>Total dollar sales by products: </h2>
-	        <div class='details'>
+	        
 	            <table border='1'>
                     <tr>
                         <th>Product ID</th>
@@ -97,12 +99,11 @@ if ($radio == 'dollarSales') {
                     $java_sales = find_sales_by_product(1);
                     $lait_sales = find_sales_by_product(2);
                     $capp_sales = find_sales_by_product(3);
-    echo        "</table>
-            </div>";
+    echo        "</table>";
 } else {
 
     echo "<h2>Sales quantities by product categories: </h2>
-	        <div class='details'>
+	        
 	            <table border='1'>
                     <tr>
                         <th>Product Categories</th>
@@ -113,8 +114,7 @@ if ($radio == 'dollarSales') {
     $single_sales = find_sales_by_category('single');
     $double_sales = find_sales_by_category('double');
               
-    echo "      </table>
-            </div>";
+    echo "      </table>";
 
     if ($single_sales>$double_sales) {
         echo "<h3>Single Shot has achieved the higher dollar sales!</h3>";
